@@ -4,7 +4,7 @@ A LuaDist utility used to wire Github repositories with Travis automatically.
 
 ## Configuration
 
-Git2Traviscan be configured by specifying several environment variables described below.
+Git2Travis can be configured by specifying several environment variables described below.
 
 
 - `GIT2TRAVIS_REPO_PATH` - the directory with all the repositories (defaults to `data/repos`)
