@@ -144,6 +144,8 @@ while retriesRemaining >= 0 do
   local ok, data = travisSync()
   if not ok then
     log:error("Error syncing Travis account.\nData: " .. pl.pretty.write(data))
+    log:debug("Waiting for " .. cfg.travisSyncWait .. " seconds...")
+    sleep(cfg.travisSyncWait)
     log:debug("Trying again. Number of tries left: " .. retriesRemaining)
     retriesRemaining = retriesRemaining - 1
     if retriesRemaining < 0 then
